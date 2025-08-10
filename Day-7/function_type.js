@@ -1,28 +1,28 @@
-// // Function Declaration(Normaal function)
-// function greet(){
-//     console.log("Good Morning")
-// }
-// greet();
+// Function Declaration(Normaal function)
+function greet(){
+    console.log("Good Morning")
+}
+greet();
 
 
-// // Function Expression
-// const greet=function(){
-//     console.log("hello bro!!")
-// }
-// greet()
+// Function Expression
+const greet=function(){
+    console.log("hello bro!!")
+}
+greet()
 
 
-// // Arrow function
-// let a = ()=>{
-//     console.log("Hello!!!")
-// }
-// a()
+// Arrow function
+let a = ()=>{
+    console.log("Hello!!!")
+}
+a()
 
 
-// // Anonymous Function
-// setTimeout(()=>{
-//     console.log(2*6);
-// },9000)
+// Anonymous Function
+setTimeout(()=>{
+    console.log(2*6);
+},9000)
 
 
 // Immediatly Invoked Function Expression
