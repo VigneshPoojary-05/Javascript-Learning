@@ -35,8 +35,8 @@ for(let ch of str){
         console.log(ch)
 }
 
-let str2=""
+let str3=""
 for(let ch of str){
-    str2+=ch+"   ";
+    str3+=ch+"   ";
 }
-console.log(str2);
+console.log(str3);
