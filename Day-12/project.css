@@ -1,0 +1,16 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+p{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 5px solid black;
+    scale: 0.5;
+    transition: all linear 0.9s;
+    
+}
