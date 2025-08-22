@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grand-parent{
+    padding: 90px;
+    background-color: black;
+    color: white;
+}
+
+.parent{
+    padding: 70px;
+    margin: 70px;
+    background-color: brown;
+    color: white;
+
+}
+
+.child{
+    padding: 50px;
+    margin: 50px;
+    background-color: lightgreen;
+    color: black;
+}
