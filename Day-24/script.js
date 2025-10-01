@@ -29,16 +29,17 @@ async function fetchData() {
   let response = await fetch(API);
   let data = await response.json();
 
-    data.forEach((obj) => {
-        let div = document.createElement("div");
-        div.className = "todo";
-        div.innerHTML = `
-                  <p>${obj.text}</p>
-                  <div class="btns">
-                      <button>Edit</button>
-                      <button>Delete</button>
-                  </div>`
-        todoContainer.append(div);
-    });
-  }
+  todoContainer.innerHTML = "";
+  data.forEach((obj) => {
+    let div = document.createElement("div");
+    div.className = "todo";
+    div.innerHTML = `
+      <p>${obj.text}</p>
+      <div class="btns">
+        <button>Edit</button>
+        <button>Delete</button>
+      </div>`
+    todoContainer.append(div);
+  });
+}
 fetchData();
