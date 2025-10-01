@@ -5,31 +5,8 @@ let API = "https://68bd2cf2227c48698f83e532.mockapi.io/api/v1/todos";
 
 addBtn.addEventListener("click", postData);
 
-async function fetchData() {
-  let response = await fetch(API);
-  let data = await response.json();
-
-  if(data){
-    todoContainer.innerHTML = "";
-    data.forEach((obj) => {
-        let div = document.createElement("div");
-        div.className = "todo";
-        div.innerHTML = `
-                  <p>${obj.text}</p>
-                  <div class="btns">
-                      <button>Edit</button>
-                      <button>Delete</button>
-                  </div>`;
-        todoContainer.append(div);
-    });
-  }
-}
-fetchData();
-
 async function postData() {
-
     let value = taskInput.value;
-    
     let objData = {
         text: value.trim()
     };
@@ -47,3 +24,21 @@ async function postData() {
   }
 }
 postData();
+
+async function fetchData() {
+  let response = await fetch(API);
+  let data = await response.json();
+
+    data.forEach((obj) => {
+        let div = document.createElement("div");
+        div.className = "todo";
+        div.innerHTML = `
+                  <p>${obj.text}</p>
+                  <div class="btns">
+                      <button>Edit</button>
+                      <button>Delete</button>
+                  </div>`
+        todoContainer.append(div);
+    });
+  }
+fetchData();
